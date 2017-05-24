@@ -1,0 +1,5 @@
+// Commit automaticos de Lunes a Jueves a las 20:00 (8 PM) 
+00 20 * * 1-4 sh /home/nhuamani/soperativos/sh/gitpushauto.sh
+
+// Commit automaticos los Viernes a las 17:30 (5:30 PM)
+30 17 * * 5 sh /home/nhuamani/soperativos/sh/gitpushauto.sh
