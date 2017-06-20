@@ -1,0 +1,42 @@
+para saber que usuarios hay en el sistema
+
+#cat /etc/passwd
+
+para saber los grupos
+
+#cat /etc/group
+
+
+agregar un usuario a varios grupos
+
+#usermod -a -G group1,group2 username
+
+
+conocer a que grupos pertenece un usuario
+
+#groups nombre_usuario
+
+
+-----CAMBIAR EL PROPIETARIO DE UN FICHERO CON CHOWN Y CHGRP---
+
+CAMBIAR USUARIO PROPIETARIO DE UN FICHERO
+#sudo chown usuario ruta-fichero
+
+CAMBIAR USUARIO PROPIETARIO DE UN DIRECTORIO
+En caso de que se trate de un directorio, si quieres que la orden se aplique de forma recursiva para todos los ficheros contenido en él, el comando será el siguiente. Si utilizas este mismo comando sin el parámetro -R, el cambio que hayas especificado solo tendrá efecto sobre el directorio, pero no sobre su contenido.
+
+#sudo chown -R usuario ruta-directorio
+
+CAMBIAR GRUPO PROPIETARIO DE UN FICHERO
+
+#sudo chgrp grupo ruta-archivo
+
+CAMBIAR GRUPO PROPIETARIO DE UN FDIRECTORIO
+En caso de que se trate de un directorio, si quieres que la orden se aplique de forma recursiva para todos los ficheros contenido en él, el comando será el siguiente. Al igual que antes, si utilizas el comando sin el parámetro -R, la orden solamente tendrá efecto sobre el directorio especificado, pero NO sobre el contenido dentro de él.
+
+#sudo chgrp -R grupo ruta-directorio
+#sudo chown :grupo ruta-archivo
+
+Si quieres cambiar tanto el usuario como el grupo al que pertenece un determinado fichero, la sintaxis de uso es la siguiente:
+
+#sudo chown usuario:grupo ruta-archivo
