@@ -1,0 +1,18 @@
+instalacion y configuracion servidor ngnx, ftp (compartir archivos dar permisos), dns (servidor local), dhcp (asiganar ip), email, zamba
+
+*/1 * * * * sh /home/nhuamani/sh/gitpush.sh
+
+
+sudo apt-get install apache2
+  139  sudo mkdir /home/pedro/public_html
+  140  cd /home/pedro/public_html/
+  141  touch index.html
+  142  sudo touch index.html
+  143  sudo nano index.html 
+  144  sudo a2enmod userdir
+  145  /etc/init.d/apache2 restart
+
+/etc/init.d/cron restart
+crontab -e
+crontab -l
+
